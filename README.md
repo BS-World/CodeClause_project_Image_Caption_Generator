@@ -1,7 +1,7 @@
 # CodeClause_project_Image_Caption_Generator
 # Image Caption Generator
 
-![Project Banner]([link-to-your-project-banner-image](https://raw.githubusercontent.com/yunjey/pytorch-tutorial/master/tutorials/03-advanced/image_captioning/png/model.png))
+![Project Banner](https://raw.githubusercontent.com/yunjey/pytorch-tutorial/master/tutorials/03-advanced/image_captioning/png/model.png)
 
 ## Description
 
