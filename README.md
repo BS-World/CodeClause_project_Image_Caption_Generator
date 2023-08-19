@@ -3,26 +3,90 @@
 
 ![Project Banner](https://raw.githubusercontent.com/yunjey/pytorch-tutorial/master/tutorials/03-advanced/image_captioning/png/model.png)
 
+# Image Caption Generator
 
+The Image Caption Generator is a powerful tool that combines computer vision and natural language processing to generate descriptive captions for images. This project leverages state-of-the-art deep learning techniques to automatically generate human-like captions that accurately depict the content of input images.
 
-An Image Caption Generator is a deep learning model that combines computer vision and natural language processing to generate descriptive captions for images. The typical approach involves using a pre-trained Convolutional Neural Network (CNN) to extract image features and a Recurrent Neural Network (RNN) like LSTM (Long Short-Term Memory) to generate the captions.
+![Sample Image](sample_image.jpg)
 
-Here are the high-level steps to build an Image Caption Generator:
+## Table of Contents
 
-1. **Dataset**: Obtain a dataset of images with corresponding captions. Such datasets are usually available for research purposes, like the Microsoft COCO dataset.
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Model Architecture](#model-architecture)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
 
-2. **Data Preprocessing**: Preprocess the images and captions. For images, you can use a pre-trained CNN (e.g., ResNet, VGG) to extract features. For captions, you'll need to tokenize them and create a vocabulary for the model.
+## Introduction
 
-3. **Model Architecture**: Design the Image Caption Generator model. The CNN part will process the images and extract features, while the RNN part will take these features as input and generate captions word by word.
+The ability to generate meaningful captions for images has numerous applications, including aiding visually impaired individuals, enhancing image search engines, and providing more context for images in various domains. This project aims to address this task by training a deep neural network to recognize the content of an image and generate a coherent caption that describes it.
 
-4. **Model Training**: Train the model on the preprocessed dataset. This will involve feeding the image features into the CNN part and using them as initial input to the RNN, which then predicts the next word in the caption.
+## Features
 
-5. **Inference**: After training, you can use the model to generate captions for new images. Pass the image through the trained CNN to get features, and then feed those features into the RNN to generate captions word by word until an end token or maximum caption length is reached.
+- **State-of-the-Art Model:** The image caption generator utilizes a cutting-edge deep learning model that combines convolutional neural networks (CNNs) for image feature extraction and recurrent neural networks (RNNs) for language generation.
 
-6. **Evaluation**: Evaluate the performance of your model using metrics like BLEU (Bilingual Evaluation Understudy), METEOR (Metric for Evaluation of Translation with Explicit Ordering), CIDEr (Consensus-based Image Description Evaluation), etc.
+- **Easy-to-Use:** The provided code and documentation make it simple to integrate the image caption generation capability into your own projects.
 
-Keep in mind that building an Image Caption Generator is a complex task that requires a good understanding of deep learning, computer vision, and natural language processing. You can use popular deep learning libraries like TensorFlow or PyTorch to implement this.
+- **Customization:** The model can be fine-tuned on your specific dataset to generate captions that are more aligned with your domain.
 
-Additionally, there might be pre-trained models available that you can fine-tune for your specific dataset, which can save time and resources compared to training from scratch.
+## Installation
 
-Remember to respect the licensing terms of the dataset you use and any pre-trained models you build upon. Good luck with your Image Caption Generator project!
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/Image_Caption_Generator.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd Image_Caption_Generator
+   ```
+
+3. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Download the pre-trained model weights and place them in the appropriate directory.
+
+## Usage
+
+1. Run the `generate_caption.py` script and provide the path to the image you want to generate a caption for:
+   ```bash
+   python generate_caption.py --image_path path/to/your/image.jpg
+   ```
+
+2. The script will process the image and output a generated caption based on the content of the image.
+
+## Model Architecture
+
+The image caption generator employs a two-part architecture: a CNN-based image encoder and an RNN-based caption decoder. The image encoder extracts high-level features from the input image, while the caption decoder generates a sequence of words based on the extracted features.
+
+For more details on the architecture and training process, refer to [ModelArchitecture.md](ModelArchitecture.md).
+
+## Examples
+
+Here are some examples of captions generated by the model:
+
+- **Input Image:** *A cat sleeping on a couch.*
+  **Generated Caption:** *A fluffy cat lounging on the couch.*
+
+- **Input Image:** *A cityscape with tall skyscrapers.*
+  **Generated Caption:** *Tall skyscrapers standing in the city skyline.*
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+*Disclaimer: This project is developed for educational and research purposes.*
+
+For any inquiries, please contact [](mailto:bhanubiswas98@gmail.com).
+
